@@ -12,4 +12,5 @@ script:
 after_script:
   - git add .
   - git commit -m 'travis自动构建gitbook'
-  - git push origin HEAD:master --force
+  - git push --force --quiet 'https://${GH_REPO_TOKEN}@${GITHUB_FANLIFE_REPO}' master:master
+  # - git push origin HEAD:master --force
