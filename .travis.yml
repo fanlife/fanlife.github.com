@@ -2,15 +2,19 @@ sudo: false
 language: node_js
 node_js: stable
 before_install: 
-  - npm install gitbook-cli -g
-  - git config user.name '${GITHUB_FANLIFE_USERNAME}'
-  - git config user.email '${GITHUB_FANLIFE_EAMIL}'
+console.log('https://${GH_REPO_TOKEN}@${GITHUB_FANLIFE_REPO}')
+  # - npm install gitbook-cli -g
+  # - git config user.name '${GITHUB_FANLIFE_USERNAME}'
+  # - git config user.email '${GITHUB_FANLIFE_EAMIL}'
+  # - git add .
+  # - git commit -m 'travis自动构建gitbook'
+  # - git push --force --quiet 'https://${GH_REPO_TOKEN}@${GITHUB_FANLIFE_REPO}' master:master
 
-script:
-  - 'gitbook build . ./docs'
+# script:
+#   - 'gitbook build . ./docs'
 
-after_script:
-  - git add .
-  - git commit -m 'travis自动构建gitbook'
-  - git push --force --quiet 'https://${GH_REPO_TOKEN}@${GITHUB_FANLIFE_REPO}' master:master
+# after_script:
+#   - git add .
+#   - git commit -m 'travis自动构建gitbook'
+#   - git push --force --quiet 'https://${GH_REPO_TOKEN}@${GITHUB_FANLIFE_REPO}' master:master
   # - git push origin HEAD:master --force
