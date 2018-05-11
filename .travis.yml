@@ -11,9 +11,7 @@ before_install:
   - git config user.email 'qianduan@fanli.com'
 
 script:
-  - 'gitbook build . ./docs'
-
-after_script:
+  - gitbook build . ./docs
   - git add .
   - git commit -m 'travis自动构建gitbook'
   - git push -f "https://${GITHUB_FANLIFE_TOKEN}@${GITHUB_FANLIFE_DOSC}" master:master
