@@ -12,4 +12,4 @@ script:
 after_script:
   - git add .
   - git commit -m 'travis自动构建gitbook'
-  - git push
+  - git push master -f
