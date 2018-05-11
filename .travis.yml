@@ -17,5 +17,5 @@ script:
   - gitbook build . ./docs
   - git add .
   - git commit -m 'travis自动构建gitbook'
-  - git push --force --quiet "https://${GITHUB_FANLIFE_TOKEN}@${GITHUB_FANLIFE_DOSC}" --branch=master
+  - git push --force --quiet "https://${GITHUB_FANLIFE_TOKEN}@${GITHUB_FANLIFE_DOSC}" --all
   # - git push origin HEAD:master --force
