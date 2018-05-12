@@ -199,12 +199,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="toast">Toast</h1>
-<p>## &#x57FA;&#x672C;&#x7528;&#x6CD5;</p>
+<h2 id="&#x57FA;&#x672C;&#x7528;&#x6CD5;">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { Toast } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fvmu&apos;</span>
 
 Toast.open(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x5F39;&#x7A97;&apos;</span>)
 </code></pre>
-<p><img src="../demo/toast_open.gif" alt="toast.open&#x6F14;&#x793A;&#x56FE;"></p>
+<p><img src="../demo/toast.gif" alt="toast.open&#x6F14;&#x793A;&#x56FE;"></p>
 <h2 id="&#x6807;&#x51C6;&#x7528;&#x6CD5;">&#x6807;&#x51C6;&#x7528;&#x6CD5;</h2>
 <pre><code class="lang-javascript">Toast.open({
     type: <span class="hljs-string">&apos;normal&apos;</span>,
@@ -223,8 +223,8 @@ Toast.open(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x5F
 <th>&#x53C2;&#x6570;</th>
 <th>&#x8BF4;&#x660E;</th>
 <th>&#x7C7B;&#x578B;</th>
-<th>&#x53EF;&#x9009;&#x503C;</th>
-<th>&#x9ED8;&#x8BA4;&#x503C; </th>
+<th style="text-align:center">&#x53EF;&#x9009;&#x503C;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C; </th>
 </tr>
 </thead>
 <tbody>
@@ -232,29 +232,36 @@ Toast.open(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x5F
 <td>type</td>
 <td>&#x5F39;&#x7A97;&#x7C7B;&#x578B;(&#x5F39;&#x7A97;&#x6587;&#x5B57;&#x989C;&#x8272;&#x4E0D;&#x540C;)</td>
 <td>string</td>
-<td>normal/success/warning/error</td>
-<td>normal</td>
+<td style="text-align:center">normal/success/warning/error</td>
+<td style="text-align:center">normal</td>
+</tr>
+<tr>
+<td>content</td>
+<td>&#x5F39;&#x7A97;&#x6587;&#x6848;&#xFF0C;&#x5FC5;&#x586B;</td>
+<td>string</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
 </tr>
 <tr>
 <td>duration</td>
 <td>&#x6301;&#x7EED;&#x65F6;&#x95F4;(&#x6BEB;&#x79D2;)</td>
 <td>number</td>
-<td>&#x2014;</td>
-<td>2500</td>
+<td style="text-align:center">&#x2014;</td>
+<td style="text-align:center">2500</td>
 </tr>
 <tr>
 <td>lock</td>
 <td>&#x662F;&#x5426;&#x9501;&#x5B9A;&#x5C4F;&#x5E55;(&#x9501;&#x5B9A;&#x5219;&#x5C4F;&#x5E55;&#x65E0;&#x6CD5;&#x70B9;&#x51FB;)</td>
 <td>boolean</td>
-<td>&#x2014;</td>
-<td>false</td>
+<td style="text-align:center">&#x2014;</td>
+<td style="text-align:center">false</td>
 </tr>
 <tr>
 <td>onClose</td>
 <td>&#x5F39;&#x7A97;&#x5173;&#x95ED;&#x540E;&#x56DE;&#x8C03;</td>
 <td>function</td>
-<td>&#x2014;</td>
-<td>&#x2014;</td>
+<td style="text-align:center">&#x2014;</td>
+<td style="text-align:center">&#x2014;</td>
 </tr>
 </tbody>
 </table>
@@ -313,7 +320,7 @@ Toast.warning(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Toast","level":"1.1.1.1","depth":3,"next":{"title":"Dialog","level":"1.1.1.2","depth":3,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]},"previous":{"title":"fvmu","level":"1.1.1","depth":2,"path":"fvmu/README.MD","ref":"fvmu/README.MD","articles":[{"title":"Toast","level":"1.1.1.1","depth":3,"path":"fvmu/plugins/toast.md","ref":"fvmu/plugins/toast.md","articles":[]},{"title":"Dialog","level":"1.1.1.2","depth":3,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fvmu/plugins/toast.md","mtime":"2018-05-12T08:09:10.717Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T08:09:57.970Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Toast","level":"1.1.1.1","depth":3,"next":{"title":"Dialog","level":"1.1.1.2","depth":3,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]},"previous":{"title":"fvmu","level":"1.1.1","depth":2,"path":"fvmu/README.MD","ref":"fvmu/README.MD","articles":[{"title":"Toast","level":"1.1.1.1","depth":3,"path":"fvmu/plugins/toast.md","ref":"fvmu/plugins/toast.md","articles":[]},{"title":"Dialog","level":"1.1.1.2","depth":3,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fvmu/plugins/toast.md","mtime":"2018-05-12T08:42:55.760Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T08:43:42.704Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
