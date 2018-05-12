@@ -303,8 +303,7 @@
 
 @font-face {
     font-family: Icon;
-    src: url(fonts/Icon.eot?ebhs91);
-    src: url(fonts/Icon.eot?#iefixebhs91) format('embedded-opentype'), url(fonts/Icon.woff?ebhs91) format('woff'), url(fonts/Icon.ttf?ebhs91) format('truetype'), url(fonts/Icon.svg?ebhs91#Icon) format('svg');
+    src: url(./Icon.woff) format('woff');
     font-weight: 400;
     font-style: normal
 }
