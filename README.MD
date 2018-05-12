@@ -8,4 +8,6 @@
 
 - 对文档以及后续可能新增的目录，**不在当前仓库进行操作**，新建仓库处理并由`travis-ci`管理部署
 
-- docs仓库自动构建流程：`travis-ci`监听docs仓库push操作，安装依赖并进行构建相关操作，然后clone本仓库(`fanlife.github.io`)，将上一步构建结果复制到`fanlife.github.io`文件夹下并提交
+- docs仓库自动构建流程：
+    1. `travis-ci`监听docs仓库push操作，安装依赖并进行构建相关操作
+    2. clone本仓库(`fanlife.github.io`)，将上一步构建结果复制到`fanlife.github.io`文件夹下并提交push
