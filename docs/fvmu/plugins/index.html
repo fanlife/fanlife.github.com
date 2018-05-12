@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Toast · GitBook</title>
+        <title>plugins · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="dialog.html" />
+    <link rel="next" href="toast.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -117,7 +117,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.1.1" data-path="./">
+        <li class="chapter active" data-level="1.1.1.1" data-path="./">
             
                 <a href="./">
             
@@ -131,7 +131,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.1.1.1.1" data-path="toast.html">
+        <li class="chapter " data-level="1.1.1.1.1" data-path="toast.html">
             
                 <a href="toast.html">
             
@@ -215,7 +215,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Toast</a>
+        <a href="../.." >plugins</a>
     </h1>
 </div>
 
@@ -230,84 +230,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="toast">Toast</h1>
-<h2 id="&#x57FA;&#x672C;&#x7528;&#x6CD5;">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2>
+                                <h1 id="plugins">plugins</h1>
+<p>plugins&#x8D77;&#x521D;&#x8BBE;&#x8BA1;&#x4E3A;&#x6302;&#x8F7D;&#x5728;Vue&#x539F;&#x578B;&#x4E0A;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x540E;&#x4FEE;&#x6539;&#x4E3A;&#x76F4;&#x63A5;&#x5BFC;&#x51FA;&#x6A21;&#x5757;&#x4EE5;&#x4F9B;&#x8C03;&#x7528;&#xFF0C;&#x65E0;&#x9700;&#x4F7F;&#x7528;<code>Vue.use</code>&#x3002;</p>
+<p>&#x9875;&#x9762;&#x4E0A;&#x8C03;&#x7528;&#x65B9;&#x5F0F;(&#x4EE5;Toast)&#x4E3A;&#x4F8B;&#xFF1A;</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { Toast } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fvmu&apos;</span>
 
-Toast.open(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x5F39;&#x7A97;&apos;</span>)
-</code></pre>
-<p><img src="../demo/toast.gif" alt="toast.open&#x6F14;&#x793A;&#x56FE;"></p>
-<h2 id="&#x6807;&#x51C6;&#x7528;&#x6CD5;">&#x6807;&#x51C6;&#x7528;&#x6CD5;</h2>
-<pre><code class="lang-javascript">Toast.open({
-    type: <span class="hljs-string">&apos;normal&apos;</span>,
-    content: <span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x5F39;&#x7A97;&apos;</span>,
-    duration: <span class="hljs-number">2500</span>,
-    lock: <span class="hljs-literal">false</span>,
-    onClose: () =&gt; {
-        alert(<span class="hljs-string">&apos;ok&apos;</span>)
-    }
-})
-</code></pre>
-<h3 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h3>
-<table>
-<thead>
-<tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x8BF4;&#x660E;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th style="text-align:center">&#x53EF;&#x9009;&#x503C;</th>
-<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C; </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>&#x5F39;&#x7A97;&#x7C7B;&#x578B;(&#x5F39;&#x7A97;&#x6587;&#x5B57;&#x989C;&#x8272;&#x4E0D;&#x540C;)</td>
-<td>string</td>
-<td style="text-align:center">normal/success/warning/error</td>
-<td style="text-align:center">normal</td>
-</tr>
-<tr>
-<td>content</td>
-<td>&#x5F39;&#x7A97;&#x6587;&#x6848;&#xFF0C;&#x5FC5;&#x586B;</td>
-<td>string</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td>duration</td>
-<td>&#x6301;&#x7EED;&#x65F6;&#x95F4;(&#x6BEB;&#x79D2;)</td>
-<td>number</td>
-<td style="text-align:center">&#x2014;</td>
-<td style="text-align:center">2500</td>
-</tr>
-<tr>
-<td>lock</td>
-<td>&#x662F;&#x5426;&#x9501;&#x5B9A;&#x5C4F;&#x5E55;(&#x9501;&#x5B9A;&#x5219;&#x5C4F;&#x5E55;&#x65E0;&#x6CD5;&#x70B9;&#x51FB;)</td>
-<td>boolean</td>
-<td style="text-align:center">&#x2014;</td>
-<td style="text-align:center">false</td>
-</tr>
-<tr>
-<td>onClose</td>
-<td>&#x5F39;&#x7A97;&#x5173;&#x95ED;&#x540E;&#x56DE;&#x8C03;</td>
-<td>function</td>
-<td style="text-align:center">&#x2014;</td>
-<td style="text-align:center">&#x2014;</td>
-</tr>
-</tbody>
-</table>
-<h2 id="&#x5FEB;&#x6377;&#x7528;&#x6CD5;">&#x5FEB;&#x6377;&#x7528;&#x6CD5;</h2>
-<pre><code class="lang-javascript">Toast.open(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x5F39;&#x7A97;&apos;</span>);
-<span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E;</span>
-Toast.open({
-    type: <span class="hljs-string">&apos;normal&apos;</span>,
-    content: <span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x5F39;&#x7A97;&apos;</span>
-});
-
-Toast.success(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x5F39;&#x7A97;&apos;</span>);
-Toast.error(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x5F39;&#x7A97;&apos;</span>);
-Toast.warning(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x8B66;&#x544A;&#x5F39;&#x7A97;&apos;</span>);
+Toast.open(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#x5F39;&#x7A97;&apos;</span>);
 </code></pre>
 
                                 
@@ -336,12 +264,12 @@ Toast.warning(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: plugins">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: fvmu">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="dialog.html" class="navigation navigation-next " aria-label="Next page: Dialog">
+                <a href="toast.html" class="navigation navigation-next " aria-label="Next page: Toast">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -352,7 +280,7 @@ Toast.warning(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x4E00;&#x4E2A;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Toast","level":"1.1.1.1.1","depth":4,"next":{"title":"Dialog","level":"1.1.1.1.2","depth":4,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]},"previous":{"title":"plugins","level":"1.1.1.1","depth":3,"path":"fvmu/plugins/README.md","ref":"fvmu/plugins/README.md","articles":[{"title":"Toast","level":"1.1.1.1.1","depth":4,"path":"fvmu/plugins/toast.md","ref":"fvmu/plugins/toast.md","articles":[]},{"title":"Dialog","level":"1.1.1.1.2","depth":4,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fvmu/plugins/toast.md","mtime":"2018-05-12T08:56:39.671Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T08:57:52.600Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"plugins","level":"1.1.1.1","depth":3,"next":{"title":"Toast","level":"1.1.1.1.1","depth":4,"path":"fvmu/plugins/toast.md","ref":"fvmu/plugins/toast.md","articles":[]},"previous":{"title":"fvmu","level":"1.1.1","depth":2,"path":"fvmu/README.MD","ref":"fvmu/README.MD","articles":[{"title":"plugins","level":"1.1.1.1","depth":3,"path":"fvmu/plugins/README.md","ref":"fvmu/plugins/README.md","articles":[{"title":"Toast","level":"1.1.1.1.1","depth":4,"path":"fvmu/plugins/toast.md","ref":"fvmu/plugins/toast.md","articles":[]},{"title":"Dialog","level":"1.1.1.1.2","depth":4,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]}]},{"title":"components","level":"1.1.1.2","depth":3,"path":"fvmu/components/README.md","ref":"fvmu/components/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fvmu/plugins/README.md","mtime":"2018-05-12T08:56:39.671Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T08:57:52.600Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
