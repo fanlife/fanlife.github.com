@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="toast.html" />
+    <link rel="next" href="plugins/" />
     
     
     <link rel="prev" href="../" />
@@ -117,9 +117,23 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.1.1" data-path="toast.html">
+        <li class="chapter " data-level="1.1.1.1" data-path="plugins/">
             
-                <a href="toast.html">
+                <a href="plugins/">
+            
+                    
+                    plugins
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1.1" data-path="plugins/toast.html">
+            
+                <a href="plugins/toast.html">
             
                     
                     Toast
@@ -130,12 +144,30 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.1.2" data-path="dialog.html">
+        <li class="chapter " data-level="1.1.1.1.2" data-path="plugins/dialog.html">
             
-                <a href="dialog.html">
+                <a href="plugins/dialog.html">
             
                     
                     Dialog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="components/">
+            
+                <a href="components/">
+            
+                    
+                    components
             
                 </a>
             
@@ -199,6 +231,83 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="fvmu">fvmu</h1>
+<blockquote>
+<p>github: <a href="git@github.com:Fanli-FE/FVMU.git">git@github.com:Fanli-FE/FVMU.git</a></p>
+<p>&#x6587;&#x6863;: <a href="https://fanlife.github.io/docs/fvmu/" target="_blank">https://fanlife.github.io/docs/fvmu/</a></p>
+</blockquote>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<pre><code class="lang-nodejs">npm install fvmu --save
+</code></pre>
+<h2 id="&#x5F15;&#x5165;">&#x5F15;&#x5165;</h2>
+<p>&#x4EC5;&#x652F;&#x6301;<strong>&#x6309;&#x9700;</strong>&#x5F15;&#x5165;&#xFF0C;&#x9700;&#x501F;&#x52A9;<a href="https://github.com/ElementUI/babel-plugin-component" target="_blank">babel-plugin-component</a></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5B89;&#x88C5; <code>babel-plugin-component</code></p>
+<pre><code class="lang-nodejs">    npm install babel-plugin-component -D
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5728; <code>.babelrc</code> &#x7684; <code>plugins</code> &#x4E2D;&#x6DFB;&#x52A0;&#xFF1A;</p>
+<pre><code class="lang-json">    <span class="hljs-string">&quot;plugins&quot;</span>: [
+        [
+            <span class="hljs-string">&quot;component&quot;</span>,
+            {
+                <span class="hljs-string">&quot;libraryName&quot;</span>: <span class="hljs-string">&quot;fvmu&quot;</span>,
+                <span class="hljs-string">&quot;styleLibraryName&quot;</span>: <span class="hljs-string">&quot;styles&quot;</span>
+            }
+        ]
+    ]
+</code></pre>
+<p>&#x63A5;&#x7740;&#xFF0C;&#x5728;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x5165;&#xFF0C;&#x4EE5;<code>Toast</code>(plugins)&#x6216;&#x8005;<code>Button</code>(components)&#x4E3A;&#x4F8B;</p>
+<pre><code class="lang-javascript">    <span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+    <span class="hljs-keyword">import</span> { Toast, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fvmu&apos;</span>
+
+    Vue.component(Button)
+
+    <span class="hljs-comment">/**********************
+    * plugins&#x7528;&#x6CD5;&#xFF0C;&#x65E0;&#x9700;&#x4F7F;&#x7528;Vue.use
+        Toast.open(&quot;fvmu)
+    * &#x6216;&#x8005;
+        Toast.open({
+            content: &quot;fvmu&quot;
+        })
+    */</span>
+</code></pre>
+<blockquote>
+<p>&#x5177;&#x4F53;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53EF;&#x53C2;&#x8003;&#x5BF9;&#x5E94;&#x6587;&#x6863;</p>
+</blockquote>
+<h2 id="&#x5F00;&#x53D1;&#x6D41;&#x7A0B;">&#x5F00;&#x53D1;&#x6D41;&#x7A0B;</h2>
+<ol>
+<li>&#x62C9;&#x53D6;/&#x66F4;&#x65B0;&#x4EE3;&#x7801;</li>
+<li>&#x521D;&#x59CB;&#x5316;<pre><code class="lang-nodejs">     npm install     //&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x4EE3;&#x7801;&#x540E;&#x90FD;&#x9700;&#x8981;&#x6267;&#x884C;&#x4E00;&#x904D;
+     npm link        //&#x6267;&#x884C;&#x8FC7;&#x4E00;&#x6B21;&#x5373;&#x53EF;&#xFF0C;&#x65E0;&#x9700;&#x6BCF;&#x6B21;&#x6267;&#x884C;
+</code></pre>
+</li>
+<li><p>&#x5F00;&#x53D1;</p>
+<ul>
+<li>&#x7EF4;&#x62A4;&#x5DF2;&#x6709;&#x7EC4;&#x4EF6;<ul>
+<li>&#x4FEE;&#x6539;&#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x8C03;&#x7528;&#x793A;&#x4F8B;&#xFF08;&#x5982;&#x9700;&#xFF09;</li>
+<li><code>npm run dev</code>&#xFF0C;&#x6D4B;&#x8BD5;&#x4EE5;&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x826F;&#x597D;&#x8FD0;&#x884C;</li>
+<li>&#x4FEE;&#x6539;<code>package.json</code>&#x4E2D;&#x7684;&#x7248;&#x672C;&#x53F7;&#x5E76;&#x63D0;&#x4EA4;&#x5230;<code>github</code>&#x548C;<code>npm</code>&#x4ED3;&#x5E93;(<code>npm publish</code>)</li>
+</ul>
+</li>
+<li>&#x65B0;&#x589E;&#x7EC4;&#x4EF6;<ul>
+<li><code>fvmu create &#x7EC4;&#x4EF6;&#x540D;</code></li>
+<li>&#x5F00;&#x53D1;&#x76F8;&#x5E94;&#x4EE3;&#x7801;&#xFF0C;&#x5728;<code>examples/pages/&#x7EC4;&#x4EF6;&#x540D;.vue</code>&#x4E2D;&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x8C03;&#x7528;&#x793A;&#x4F8B;&#xFF0C;&#x5E76;&#x6D4B;&#x8BD5;&#x4EE5;&#x4FDD;&#x8BC1;&#x4EE3;&#x7801;&#x826F;&#x597D;&#x8FD0;&#x884C;</li>
+<li><code>npm run build</code></li>
+<li>&#x4FEE;&#x6539;<code>package.json</code>&#x4E2D;&#x7684;&#x7248;&#x672C;&#x53F7;&#x5E76;&#x63D0;&#x4EA4;&#x5230;<code>github</code>&#x548C;<code>npm</code>&#x4ED3;&#x5E93;(<code>npm publish</code>)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>fvmu</code>&#x547D;&#x4EE4;&#xFF1A; <code>fvmu create &#x7EC4;&#x4EF6;&#x540D;</code>&#xFF0C;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF1A;<ul>
+<li><code>-E</code>&#xFF1A;&#x4E0D;&#x521B;&#x5EFA;&#x7EC4;&#x4EF6;&#x5BF9;&#x5E94;demo&#xFF0C;&#x9ED8;&#x8BA4;&#x521B;&#x5EFA;&#xFF0C;&#x5982;&#x4F20;&#x5165;&#x5219;&#x4E0D;&#x521B;&#x5EFA;demo</li>
+<li><code>-t</code>&#xFF1A;&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;<code>components</code>&#xFF0C;&#x82E5;&#x4E3A;&#x5168;&#x5C40;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4F20;&#x5165;<code>-t plugins</code></li>
+<li><code>-S</code>&#xFF1A;&#x4E0D;&#x542F;&#x52A8;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x5E76;&#x6253;&#x5F00;demo&#x9875;&#xFF08;&#x5982;&#x4E0D;&#x521B;&#x5EFA;demo&#x5219;&#x6B64;&#x9879;&#x65E0;&#x6548;&#xFF09;&#xFF0C;&#x5982;&#x4F20;&#x5165;&#x5219;&#x4E0D;&#x542F;&#x52A8;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;<code>npm run dev</code>&#x624B;&#x52A8;&#x542F;&#x52A8;</li>
+<li><code>-v</code>&#xFF1A;&#x7248;&#x672C;&#x4FE1;&#x606F;</li>
+<li><code>-h</code>&#xFF1A;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
 
                                 
                                 </section>
@@ -231,7 +340,7 @@
                 </a>
                 
                 
-                <a href="toast.html" class="navigation navigation-next " aria-label="Next page: Toast">
+                <a href="plugins/" class="navigation navigation-next " aria-label="Next page: plugins">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -242,7 +351,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"fvmu","level":"1.1.1","depth":2,"next":{"title":"Toast","level":"1.1.1.1","depth":3,"path":"fvmu/toast.md","ref":"fvmu/toast.md","articles":[]},"previous":{"title":"返利网前端文档","level":"1.1","depth":1,"path":"README.MD","ref":"README.MD","articles":[{"title":"fvmu","level":"1.1.1","depth":2,"path":"fvmu/README.MD","ref":"fvmu/README.MD","articles":[{"title":"Toast","level":"1.1.1.1","depth":3,"path":"fvmu/toast.md","ref":"fvmu/toast.md","articles":[]},{"title":"Dialog","level":"1.1.1.2","depth":3,"path":"fvmu/dialog.md","ref":"fvmu/dialog.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fvmu/README.MD","mtime":"2018-05-12T06:44:52.599Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T06:45:43.033Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"fvmu","level":"1.1.1","depth":2,"next":{"title":"plugins","level":"1.1.1.1","depth":3,"path":"fvmu/plugins/README.md","ref":"fvmu/plugins/README.md","articles":[{"title":"Toast","level":"1.1.1.1.1","depth":4,"path":"fvmu/plugins/toast.md","ref":"fvmu/plugins/toast.md","articles":[]},{"title":"Dialog","level":"1.1.1.1.2","depth":4,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]}]},"previous":{"title":"返利网前端文档","level":"1.1","depth":1,"path":"README.MD","ref":"README.MD","articles":[{"title":"fvmu","level":"1.1.1","depth":2,"path":"fvmu/README.MD","ref":"fvmu/README.MD","articles":[{"title":"plugins","level":"1.1.1.1","depth":3,"path":"fvmu/plugins/README.md","ref":"fvmu/plugins/README.md","articles":[{"title":"Toast","level":"1.1.1.1.1","depth":4,"path":"fvmu/plugins/toast.md","ref":"fvmu/plugins/toast.md","articles":[]},{"title":"Dialog","level":"1.1.1.1.2","depth":4,"path":"fvmu/plugins/dialog.md","ref":"fvmu/plugins/dialog.md","articles":[]}]},{"title":"components","level":"1.1.1.2","depth":3,"path":"fvmu/components/README.md","ref":"fvmu/components/README.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fvmu/README.MD","mtime":"2018-05-12T09:56:39.277Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-12T09:57:40.722Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
